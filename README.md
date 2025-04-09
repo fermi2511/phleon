@@ -1,3 +1,3 @@
 # VenoSense Homepage
 
-Final version with Tailwind-compatible green colors.
+Final working version with Tailwind-compatible green and working image.
