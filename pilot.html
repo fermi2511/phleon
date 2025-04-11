@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join the VenoSense Pilot Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script defer data-domain="venosense.tech" src="https://plausible.io/js/script.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; max-width: 700px; margin: auto; padding: 2rem; background: #f9f9f9; }
+    h1 { color: #046307; }
+    label { font-weight: bold; display: block; margin-top: 1rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.2rem; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #046307; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; margin-top: 1rem; cursor: pointer; }
+    img { width: 100%; margin-top: 1.5rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Join the VenoSense Pilot</h1>
+  <p>We're building a wearable that enables early detection of deep vein thrombosis (DVT). If you're interested in trying VenoSense once it's ready, let us know below.</p>
+  
+  <form name="Pilot LOI" method="POST" data-netlify="true">
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+    
+    <label>Email Address</label>
+    <input type="email" name="email" required>
+    
+    <label>Why are you interested in VenoSense?</label>
+    <textarea name="reason" rows="4" placeholder="Optional..."></textarea>
+
+    <button type="submit">I'm Interested</button>
+  </form>
+
+  <img src="sock-mockup.png" alt="VenoSense Sock Prototype">
+</body>
+</html>
