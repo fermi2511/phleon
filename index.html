@@ -5,46 +5,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VenoSense</title>
+  <script defer data-domain="venosense.tech" src="https://plausible.io/js/script.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
+      background-color: #f7f7f7;
       color: #111;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
     header {
       background-color: #046307;
       color: white;
-      padding: 2rem 1rem;
+      padding: 2rem;
     }
     main {
       padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
     }
-    h2 {
-      margin-top: 2rem;
-    }
-    .image-row {
+    .images {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      gap: 2rem;
       flex-wrap: wrap;
+      gap: 40px;
       margin: 2rem auto;
     }
-    .image-row img {
-      max-width: 250px;
+    img {
+      max-width: 300px;
       height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #046307;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
     }
     footer {
       background-color: #eee;
-      color: #555;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.9em;
+      margin-top: 2rem;
     }
-    a {
+    footer a {
+      margin: 0 10px;
       color: #046307;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -68,7 +80,7 @@
       Real-time signal processing and smart feedback help identify venous stasis trends before symptoms arise.
     </p>
 
-    <div class="image-row">
+    <div class="images">
       <img src="mockup.png" alt="App Preview" />
       <img src="sock.png" alt="Sock Prototype" />
     </div>
@@ -81,14 +93,15 @@
 
     <h2>Contact</h2>
     <p>
-      For inquiries or pilot collaboration: <a href="pilot.html">Join the Pilot Program</a><br />
-      Or email us directly: <a href="mailto:hello@venosense.tech">hello@venosense.tech</a>
+      For inquiries or pilot collaboration: <a href="mailto:hello@venosense.tech">hello@venosense.tech</a>
     </p>
+    <a class="button" href="pilot.html">Join Pilot Program</a>
   </main>
 
   <footer>
-    <p>Impressum: Margeritengasse 11/4, A-2700 Wiener Neustadt</p>
     <p>&copy; 2024 VenoSense. All rights reserved.</p>
+    <p>Margeritengasse 11/4, A-2700 Wiener Neustadt</p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a></p>
   </footer>
 </body>
 </html>
