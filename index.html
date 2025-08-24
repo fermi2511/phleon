@@ -28,15 +28,15 @@
           fontFamily: { sans: ['Urbanist','ui-sans-serif','system-ui'] },
           colors: {
             phleon: {
-              primary:'#046307', // Logo, Buttons, Key
-              fresh:'#24B435',   // Secondary
-              mint:'#86CC99',    // Backgrounds, Hover
-              lime:'#99FFC3',    // Highlights, light BG
+              primary:'#046307', /* Logo, Buttons, Key */
+              fresh:'#24B435',   /* Secondary */
+              mint:'#86CC99',    /* BGs, Hover */
+              lime:'#99FFC3',    /* Highlights */
               beige:'#C6A37A',
               blue:'#91C1B5',
-              light:'#DEE2E6',   // Neutral BG
-              yellow:'#F8DC6B',  // Warm accent
-              red:'#B22222',     // Alert
+              light:'#DEE2E6',   /* Neutral BG */
+              yellow:'#F8DC6B',  /* Accent */
+              red:'#B22222',
               misty:'#ADB5BD'
             }
           }
@@ -143,33 +143,40 @@
     <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
       <h2 class="text-2xl md:text-3xl font-semibold">Kontakt / Interesse</h2>
 
-      <!-- Erfolgsmeldung (wird gezeigt, wenn ?sent=1) -->
+      <!-- Erfolgsmeldung -->
       <div id="thanks" class="hidden mt-4 p-4 rounded-lg border border-phleon-mint bg-phleon-lime text-phleon-primary">
         Danke für Ihre Nachricht! Wir melden uns zeitnah.
       </div>
 
       <div class="mt-6 grid md:grid-cols-2 gap-8 items-start">
-        <form class="p-6 rounded-xl border bg-white space-y-3" action="https://formspree.io/f/mrbazaok" method="POST">
+        <form id="contactForm" class="p-6 rounded-xl border bg-white space-y-3"
+              action="https://formspree.io/f/mrbazaok" method="POST" novalidate>
           <!-- Spam-Honeypot -->
           <input type="text" name="_gotcha" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
-          <!-- Redirect zurück auf eigene Seite -->
-          <input type="hidden" name="_next" value="https://www.phleon.tech/?sent=1#contact">
           <input type="hidden" name="_subject" value="Phleon – Interesse / Kontaktanfrage">
 
           <label class="block text-sm">
             <span class="text-slate-800">Name</span>
-            <input class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint" type="text" name="name" placeholder="Ihr Name" required>
+            <input class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint"
+                   type="text" name="name" placeholder="Ihr Name" required>
           </label>
           <label class="block text-sm">
             <span class="text-slate-800">E‑Mail</span>
-            <input class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint" type="email" name="email" placeholder="name@example.com" required>
+            <input class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint"
+                   type="email" name="email" placeholder="name@example.com" required>
           </label>
           <label class="block text-sm">
             <span class="text-slate-800">Nachricht</span>
-            <textarea class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint" name="message" rows="4" placeholder="Kurze Nachricht (Invest, Partnerschaft, Pilot, …)"></textarea>
+            <textarea class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint"
+                      name="message" rows="4" placeholder="Kurze Nachricht (Invest, Partnerschaft, Pilot, …)"></textarea>
           </label>
-          <button class="w-full bg-phleon-primary hover:bg-phleon-fresh text-white rounded-lg px-4 py-3" type="submit">Absenden</button>
-          <p class="text-xs text-slate-500 mt-2">Alternativ per E‑Mail: <a class="underline hover:text-phleon-fresh" href="mailto:mario@phleon.tech?subject=Interesse%20an%20Phleon">mario@phleon.tech</a></p>
+          <button class="w-full bg-phleon-primary hover:bg-phleon-fresh text-white rounded-lg px-4 py-3" type="submit">
+            Absenden
+          </button>
+          <p class="text-xs text-slate-500 mt-2">
+            Alternativ per E‑Mail:
+            <a class="underline hover:text-phleon-fresh" href="mailto:mario@phleon.tech?subject=Interesse%20an%20Phleon">mario@phleon.tech</a>
+          </p>
         </form>
 
         <div class="p-6 rounded-xl border bg-white">
@@ -193,7 +200,53 @@
   </footer>
 
   <script>
+    // Jahr
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Intercept Formspree submit to stay on-page
+    (function () {
+      const form = document.getElementById('contactForm');
+      const thanks = document.getElementById('thanks');
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Native validation; show messages if invalid
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const endpoint = form.getAttribute('action');
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            if (thanks) thanks.classList.remove('hidden');
+            form.reset();
+
+            // Update URL to ?sent=1#contact (optional, for bookmarking)
+            const url = new URL(window.location.href);
+            url.searchParams.set('sent', '1');
+            url.hash = 'contact';
+            history.replaceState(null, '', url);
+          } else {
+            alert('Leider hat das Senden nicht funktioniert. Bitte versuchen Sie es später erneut oder schreiben Sie an mario@phleon.tech.');
+          }
+        } catch (err) {
+          alert('Netzwerkfehler. Bitte versuchen Sie es später erneut.');
+        }
+      });
+    })();
+
+    // Also show the banner if user opens a bookmarked ?sent=1 URL
     const params = new URLSearchParams(window.location.search);
     if (params.get('sent') === '1') {
       const box = document.getElementById('thanks');
