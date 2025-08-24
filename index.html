@@ -26,7 +26,7 @@
       theme: {
         extend: {
           fontFamily: { sans: ['Urbanist','ui-sans-serif','system-ui'] },
-          colors: { phleon: { green:'#10B981', dark:'#0B1320' } }
+          colors: { phleon: { green:'#2E7D32', dark:'0B1320' } }
         }
       }
     }
@@ -44,10 +44,10 @@
   <!-- Header -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <img src="/sock.png" alt="Phleon Logo" class="w-8 h-8" width="32" height="32">
-        <span class="font-bold text-xl">phleon</span>
-      </a>
+    <a href="/" class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Phleon Logo" class="h-8" />
+      <span class="sr-only">Phleon</span>
+    </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#about" class="hover:text-phleon-green">Überblick</a>
         <a href="#founders" class="hover:text-phleon-green">Team</a>
@@ -136,6 +136,7 @@
         <form class="p-6 rounded-xl border bg-white space-y-3" action="https://formspree.io/f/mrbazaok" method="POST">
           <!-- Spam-Honeypot -->
           <input type="text" name="_gotcha" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_next" value="https://www.phleon.tech/#danke">
           <label class="block text-sm">
             <span class="text-slate-600">Name</span>
             <input class="mt-1 w-full border rounded-lg px-4 py-3" type="text" name="name" placeholder="Ihr Name" required>
