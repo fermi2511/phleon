@@ -1,147 +1,211 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phleon – AI-Powered Wearable for Early DVT Detection</title>
-    <meta name="description" content="Phleon is the first AI-powered wearable for real-time DVT risk monitoring – using smart bioimpedance, PPG, and motion sensors in a compression sock." />
-  <script defer data-domain="phleon.tech" src="https://plausible.io/js/script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phleon — Early Detection of Deep Vein Thrombosis</title>
+  <meta name="description" content="Phleon is a wearable, AI‑assisted smart sock for early detection of deep vein thrombosis (DVT). Multisensor fusion: IPG, PPG, temperature, motion." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Phleon — Early Detection of Deep Vein Thrombosis" />
+  <meta property="og:description" content="Wearable, AI‑assisted smart sock for early DVT risk detection. Pilot phase underway." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.phleon.tech/" />
+  <meta property="og:image" content="https://www.phleon.tech/mockup.png" />
+
+  <!-- Fonts + Tailwind (CDN, no build step) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Urbanist', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            phleon: {
+              green: '#10B981',   // tweak to your exact brand if needed
+              dark: '#0B1320'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/sock.png" type="image/png" />
+
+  <!-- Simple style tweaks -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #111;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #046307;
-      color: white;
-      padding: 2rem;
-    }
-    main {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .images {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin: 2rem auto;
-    }
-    img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-    }
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #046307;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    footer {
-      background-color: #eee;
-      padding: 1rem;
-      font-size: 0.9em;
-      margin-top: 2rem;
-    }
-    footer a {
-      margin: 0 10px;
-      color: #046307;
-      text-decoration: none;
-    }
-    ul {
-      text-align: left;
-      max-width: 600px;
-      margin: 1em auto;
-    }
+    .section { scroll-margin-top: 96px; }
   </style>
+
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Phleon",
+    "url":"https://www.phleon.tech",
+    "logo":"https://www.phleon.tech/sock.png",
+    "sameAs":[]
+  }
+  </script>
 </head>
-<body>
-  <header>
-    <h1>phleon</h1>
-    <p>Detect DVT Before It Strikes – From the Comfort of Home.</p>
+<body class="bg-white text-slate-800 font-sans">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/sock.png" alt="Phleon logo" class="w-8 h-8">
+        <span class="font-bold text-xl">phleon</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#problem" class="hover:text-phleon-green">Problem</a>
+        <a href="#solution" class="hover:text-phleon-green">Solution</a>
+        <a href="#investors" class="hover:text-phleon-green">Investors</a>
+        <a href="#team" class="hover:text-phleon-green">Team</a>
+        <a href="#contact" class="hover:text-phleon-green">Contact</a>
+        <a href="/pilot.html" class="text-white bg-phleon-green rounded-lg px-3 py-2">Join Pilot</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>The Silent Danger of DVT</h2>
-      <p>
-        Deep vein thrombosis (DVT) affects hundreds of thousands every year — but often shows no early symptoms.
-        Risk peaks after surgery, long travel, or reduced mobility. Yet outside hospitals, there’s no simple way to monitor it.
-      </p>
-    </section>
-
-    <section>
-      <h2>A Smart Sock for Early Detection</h2>
-      <p>
-        phleon is the first wearable designed to detect DVT risk early — from home, rehab, or even on the go.
-        Our medical-grade compression sock combines:
-      </p>
-      <ul>
-        <li>🧠 <strong>Bioimpedance sensing (IPG)</strong> to monitor venous resistance</li>
-        <li>💡 <strong>PPG & temperature sensors</strong> in skin contact for circulation tracking</li>
-        <li>📈 <strong>Motion tracking</strong> for stasis risk</li>
-        <li>📲 <strong>Live feedback</strong> in our mobile app</li>
-      </ul>
-      <div class="images">
-        <img src="mockup.png" alt="App Preview" />
-        <img src="sock.png" alt="Sock Prototype" />
+  <!-- Hero -->
+  <section class="section" id="hero">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+          Early Detection of Deep Vein Thrombosis — <span class="text-phleon-green">from home</span>
+        </h1>
+        <p class="mt-5 text-lg text-slate-600">
+          Phleon is a wearable, AI‑assisted smart sock that tracks venous function using
+          bioimpedance (IPG), photoplethysmography (PPG), temperature and motion to estimate real‑time DVT risk.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#investors" class="px-5 py-3 rounded-lg bg-phleon-green text-white">Investors: Request Deck</a>
+          <a href="/pilot.html" class="px-5 py-3 rounded-lg border border-slate-300">Join Pilot Program</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Currently in pre‑clinical pilot phase.</p>
       </div>
-    </section>
+      <div class="rounded-xl border bg-slate-50 p-4">
+        <img src="/mockup.png" alt="Phleon app and sock" class="w-full rounded-lg">
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Help Shape the Future of DVT Monitoring</h2>
-      <p>
-        We’re recruiting early testers and real-world use cases. Whether you're a patient, caregiver, athlete, or clinic:
-        your feedback helps us make a better product.
+  <!-- Problem -->
+  <section class="section border-t" id="problem">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">The Problem</h2>
+      <p class="mt-4 text-slate-600 max-w-3xl">
+        DVT is a frequent, costly, and often silent threat—particularly post‑surgery, during immobility,
+        long travel, or in chronic conditions. Today’s detection is episodic and reactive; continuous,
+        non‑invasive monitoring at home is missing.
       </p>
-      <a class="button" href="pilot.html">Join the Pilot Program</a>
-    </section>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-xl border">
+          <p class="text-sm text-slate-500">Impact</p>
+          <p class="mt-2 font-medium">Prevents delayed diagnosis and complications (PE), reduces readmissions and costs.</p>
+        </div>
+        <div class="p-5 rounded-xl border">
+          <p class="text-sm text-slate-500">Users</p>
+          <p class="mt-2 font-medium">Post‑op patients, oncology, long‑haul travel, elderly with limited mobility.</p>
+        </div>
+        <div class="p-5 rounded-xl border">
+          <p class="text-sm text-slate-500">Gap</p>
+          <p class="mt-2 font-medium">No continuous, user‑friendly DVT risk monitoring for the home setting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Status</h2>
-      <p>Phleon is in pre-clinical pilot phase. We’re building it with real-world users to ensure it works where it matters most.</p>
-    </section>
-
-    <section>
-      <h2>Share Your Thoughts</h2>
-      <p>
-        What would you want in a wearable for vein health? What worries you most about DVT?
-        Take our 2-minute survey — your answers help shape the future.
+  <!-- Solution / Tech -->
+  <section class="section border-t" id="solution">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">The Solution</h2>
+      <p class="mt-4 text-slate-600 max-w-3xl">
+        A comfortable smart sock with multi‑sensor fusion:
+        <strong>IPG</strong> (venous impedance), <strong>PPG</strong> (blood volume),
+        <strong>temperature</strong>, and <strong>motion</strong>, combined with an
+        explainable AI risk score and simple user feedback in a mobile app.
       </p>
-      <a class="button" href="https://forms.gle/E8zdrxgZ5rBNyKkZ6" target="_blank">Take Survey</a>
-    </section>
+      <ul class="mt-6 grid md:grid-cols-3 gap-6">
+        <li class="p-5 rounded-xl border"><strong>Continuous</strong><br><span class="text-slate-600">Home monitoring between visits.</span></li>
+        <li class="p-5 rounded-xl border"><strong>Non‑invasive</strong><br><span class="text-slate-600">Cuff‑less, wearable, comfortable.</span></li>
+        <li class="p-5 rounded-xl border"><strong>Actionable</strong><br><span class="text-slate-600">Real‑time signal and app guidance.</span></li>
+      </ul>
+    </div>
+  </section>
 
-    <section>
-      <h2>Team</h2>
-      <p>
-        <a href="https://www.linkedin.com/in/mario-schrenk-84258886/" target="_blank">Mario Schrenk – Co-Founder</a><br />
-        <a href="https://www.linkedin.com/in/sandra-seichter-51578986/" target="_blank">Sandra Seichter – Co-Founder</a>
-      </p>
-    </section>
+  <!-- Investor Section -->
+  <section class="section border-t bg-slate-50" id="investors">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">For Investors</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <div class="p-5 rounded-xl border bg-white">
+            <p class="text-sm text-slate-500">Milestones</p>
+            <ul class="mt-2 list-disc pl-5 text-slate-700">
+              <li>Pre‑clinical pilot phase underway</li>
+              <li>Accepted to accent incubator</li>
+              <li>AWS PreSeed in preparation</li>
+              <li>Clinical study design drafted</li>
+            </ul>
+          </div>
+          <div class="p-5 rounded-xl border bg-white">
+            <p class="text-sm text-slate-500">Market</p>
+            <p class="mt-2">Large addressable market in post‑operative care, oncology, and elderly care; opportunity for payer‑aligned outcomes and reduced readmissions.</p>
+          </div>
+          <div class="p-5 rounded-xl border bg-white">
+            <p class="text-sm text-slate-500">Technology & IP</p>
+            <p class="mt-2">Unique cuff‑less sensor fusion (IPG+PPG+motion+temp) with explainable AI; MDR‑oriented development and regulatory plan.</p>
+          </div>
+        </div>
+        <div class="p-6 rounded-2xl border bg-white">
+          <h3 class="text-lg font-semibold">Request Our Investor Deck</h3>
+          <p class="mt-2 text-slate-600">Get an overview of evidence, roadmap, economics, and risk mitigation.</p>
+          <!-- Option A: mailto; Option B: Formspree (swap action URL) -->
+          <form class="mt-4 space-y-3" action="https://formspree.io/f/your-id" method="POST">
+            <input class="w-full border rounded-lg px-4 py-3" type="email" name="email" placeholder="Your email" required>
+            <textarea class="w-full border rounded-lg px-4 py-3" name="message" placeholder="Optional message"></textarea>
+            <button class="w-full bg-phleon-green text-white rounded-lg px-4 py-3" type="submit">Request Deck</button>
+          </form>
+          <p class="mt-3 text-xs text-slate-500">Or email: <a class="underline" href="mailto:mario@phleon.tech">mario@phleon.tech</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>
-        For inquiries or pilot collaboration: <a href="mailto:mario@phleon.tech">mario@phleon.tech</a>
-      </p>
-    </section>
-  </main>
+  <!-- Team -->
+  <section class="section border-t" id="team">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">Team</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="p-5 rounded-xl border">
+          <h3 class="font-semibold">Mario Schrenk</h3>
+          <p class="text-slate-600">Co‑Founder — MedTech, regulatory & systems engineering</p>
+          <p class="mt-2 text-sm"><a class="underline" href="https://www.linkedin.com/in/">LinkedIn</a></p>
+        </div>
+        <div class="p-5 rounded-xl border">
+          <h3 class="font-semibold">Sandra [Surname]</h3>
+          <p class="text-slate-600">Co‑Founder — Operations & commercial strategy</p>
+          <p class="mt-2 text-sm"><a class="underline" href="https://www.linkedin.com/in/">LinkedIn</a></p>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">Advisors available upon request.</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 phleon. All rights reserved.</p>
-    <p>Margeritengasse 11/4, A-2700 Wiener Neustadt</p>
-    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a></p>
-  </footer>
+  <!-- Contact / Footer -->
+  <section class="section border-t" id="contact">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">Contact</h2>
+      <p class="mt-3">Email: <a class="underline" href="mailto:mario@phleon.tech">mario@phleon.tech</a></p>
+      <p class="text-sm text-slate-500 mt-2">© <span id="y"></span> Phleon</p>
+    </div>
+  </section>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
