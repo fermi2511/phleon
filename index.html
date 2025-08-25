@@ -4,21 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Phleon – Frühwarnsystem für Venengesundheit</title>
-  <meta name="description" content="Phleon ist ein tragbares, KI‑unterstütztes System zur frühzeitigen Erkennung venöser Risiken (z. B. DVT) – kontinuierlich und bequem zu Hause." />
+  <meta name="description" content="Phleon ist ein tragbares, KI-unterstütztes System zur frühzeitigen Erkennung venöser Risiken (z. B. DVT) – kontinuierlich und bequem zu Hause." />
   <link rel="canonical" href="https://www.phleon.tech/" />
   <meta name="theme-color" content="#046307" />
   <!-- hreflang -->
   <link rel="alternate" href="https://www.phleon.tech/" hreflang="de" />
   <link rel="alternate" href="https://www.phleon.tech/en/" hreflang="en" />
   <link rel="alternate" href="https://www.phleon.tech/" hreflang="x-default" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Phleon – Frühwarnsystem für Venengesundheit" />
-  <meta property="og:description" content="Multisensorik (IPG, PPG, Temperatur, Bewegung) + KI für kontinuierliche venöse Gesundheitsüberwachung." />
-  <meta property="og:image" content="https://www.phleon.tech/mockup.png" />
-  <meta property="og:url" content="https://www.phleon.tech/" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts + Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -40,23 +32,16 @@
     }
   </script>
 
-  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="icon" href="/pictures/logo.png" type="image/png" />
   <style>.section{scroll-margin-top:92px}</style>
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Phleon","url":"https://www.phleon.tech","logo":"https://www.phleon.tech/logo.png"}
-  </script>
 </head>
 <body class="bg-white text-slate-800 font-sans">
   <!-- Header -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="/" class="flex items-center" aria-label="Phleon Startseite">
-        <img src="/logo.png" alt="Phleon Logo" class="h-10 w-auto" width="160" height="40" loading="eager">
+        <img src="/pictures/logo.png" alt="Phleon Logo" class="h-10 w-auto">
       </a>
-
-      <!-- Desktop nav + language -->
       <div class="hidden md:flex items-center gap-6 text-sm">
         <a href="#about" class="hover:text-phleon-fresh">Überblick</a>
         <a href="#founders" class="hover:text-phleon-fresh">Team</a>
@@ -64,22 +49,7 @@
         <a href="/en/" class="hover:text-phleon-fresh" hreflang="en" lang="en">EN</a>
         <a href="#contact" class="text-white bg-phleon-primary hover:bg-phleon-fresh rounded-lg px-3 py-2">Ich habe Interesse</a>
       </div>
-
-      <!-- Mobile toggle -->
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg border px-3 py-2"
-              aria-controls="mobileNav" aria-expanded="false" aria-label="Menü öffnen">Menü</button>
     </div>
-
-    <!-- Mobile nav -->
-    <nav id="mobileNav" class="md:hidden hidden border-t bg-white" aria-label="Mobile Navigation">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-3 text-sm">
-        <a href="#about" class="hover:text-phleon-fresh">Überblick</a>
-        <a href="#founders" class="hover:text-phleon-fresh">Team</a>
-        <a href="#contact" class="hover:text-phleon-fresh">Kontakt</a>
-        <a href="/en/" class="hover:text-phleon-fresh" hreflang="en" lang="en">EN</a>
-        <a href="#contact" class="text-center text-white bg-phleon-primary hover:bg-phleon-fresh rounded-lg px-3 py-2">Ich habe Interesse</a>
-      </div>
-    </nav>
   </header>
 
   <!-- Hero -->
@@ -89,69 +59,17 @@
         <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
           Phleon – <span class="text-phleon-primary">Frühwarnsystem</span> für Venengesundheit
         </h1>
-        <p class="mt-5 text-[17px] leading-relaxed text-slate-800 max-w-xl">
+        <p class="mt-5 text-[17px] leading-relaxed">
           Tiefe Venenthrombosen (DVT) sind oft stumm. Phleon kombiniert Multisensorik (IPG, PPG, Temperatur, Bewegung) mit KI,
-          um venöse Veränderungen frühzeitig zu erkennen und <strong>Komplikationen zu verhindern</strong> – kontinuierlich, zu Hause.
+          um venöse Veränderungen frühzeitig zu erkennen und <strong>Komplikationen zu verhindern</strong>.
         </p>
         <div class="mt-7">
           <a href="#contact" class="inline-block px-5 py-3 rounded-lg bg-phleon-primary hover:bg-phleon-fresh text-white">Ich habe Interesse</a>
         </div>
-        <p class="mt-3 text-xs text-slate-600">Aktuell: Vorserien‑/Pilotphase.</p>
       </div>
       <div class="rounded-xl border bg-white p-4">
-        <img src="/mockup.png" alt="Phleon Mockup – App & Socke" class="w-full rounded-lg" width="1200" height="800" loading="lazy">
+        <img src="/pictures/mockup.png" alt="Phleon Mockup – App & Socke" class="w-full rounded-lg">
       </div>
-    </div>
-  </section>
-
-  <!-- Proof points band -->
-  <section aria-label="Nachweise" class="border-t bg-phleon-light/40">
-    <div class="max-w-6xl mx-auto px-4 py-6 grid gap-4 md:grid-cols-3">
-      <div class="flex items-start gap-3"><span class="w-5 h-5 mt-1 text-phleon-primary">✓</span><p class="text-sm leading-relaxed"><strong>Akzeptiert bei accent</strong> – Programmteilnahme bestätigt.</p></div>
-      <div class="flex items-start gap-3"><span class="w-5 h-5 mt-1 text-phleon-primary">✓</span><p class="text-sm leading-relaxed"><strong>AWS PreSeed</strong> – Antrag in Vorbereitung mit klarer Roadmap.</p></div>
-      <div class="flex items-start gap-3"><span class="w-5 h-5 mt-1 text-phleon-primary">✓</span><p class="text-sm leading-relaxed"><strong>LOIs klinischer Partner</strong> – Kooperationen für Pilot & Validierung.</p></div>
-    </div>
-  </section>
-
-  <!-- DVT Fact Box -->
-  <section aria-label="DVT Fakten" class="border-t bg-phleon-light/40">
-    <div class="max-w-6xl mx-auto px-4 py-8">
-      <div class="rounded-2xl border bg-white">
-        <div class="grid md:grid-cols-4 gap-6 p-6">
-          <div class="p-4 rounded-xl bg-phleon-lime/60">
-            <p class="text-xs uppercase tracking-wide text-phleon-primary">Häufigkeit</p>
-            <p class="mt-2 text-xl font-semibold">DVT oft unbemerkt</p>
-            <p class="mt-1 text-sm text-slate-800">Hohe Inzidenz nach OP, Immobilität & Langstreckenreisen.</p>
-          </div>
-          <div class="p-4 rounded-xl bg-phleon-lime/60">
-            <p class="text-xs uppercase tracking-wide text-phleon-primary">Risiko</p>
-            <p class="mt-2 text-xl font-semibold">Lungenembolie</p>
-            <p class="mt-1 text-sm text-slate-800">Potentiell tödlich – schnelles Handeln ist entscheidend.</p>
-          </div>
-          <div class="p-4 rounded-xl bg-phleon-lime/60">
-            <p class="text-xs uppercase tracking-wide text-phleon-primary">Versorgungslücke</p>
-            <p class="mt-2 text-xl font-semibold">Episodische Diagnostik</p>
-            <p class="mt-1 text-sm text-slate-800">Zwischen Terminen fehlt <em>kontinuierliche</em> Überwachung zu Hause.</p>
-          </div>
-          <div class="p-4 rounded-xl bg-phleon-lime/60">
-            <p class="text-xs uppercase tracking-wide text-phleon-primary">Chance</p>
-            <p class="mt-2 text-xl font-semibold">Prävention & Kosten</p>
-            <p class="mt-1 text-sm text-slate-800">Früherkennung kann Komplikationen und Kosten reduzieren.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Warum Phleon -->
-  <section id="about" class="section border-t">
-    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-      <h2 class="text-2xl md:text-3xl font-semibold">Warum Phleon?</h2>
-      <ul class="mt-6 grid md:grid-cols-3 gap-6">
-        <li class="p-5 rounded-xl border"><strong>Problem</strong><p class="mt-2 text-[17px] leading-relaxed">DVT ist häufig, teuer und oft unbemerkt – erhöhtes Risiko nach OP, Immobilität oder Langstrecke.</p></li>
-        <li class="p-5 rounded-xl border"><strong>Lösung</strong><p class="mt-2 text-[17px] leading-relaxed">Kontinuierliches, nicht‑invasives Monitoring via smartem Strumpf + App. Multisensorik mit erklärbarer KI.</p></li>
-        <li class="p-5 rounded-xl border"><strong>Potenzial</strong><p class="mt-2 text-[17px] leading-relaxed">Großer Markt in Nachsorge & Prävention; klare klinische Relevanz und Weg zu erstattungsfähigen Anwendungen.</p></li>
-      </ul>
     </div>
   </section>
 
@@ -161,23 +79,20 @@
       <h2 class="text-2xl md:text-3xl font-semibold">Team</h2>
       <div class="mt-6 grid md:grid-cols-2 gap-6">
         <div class="p-5 rounded-xl border flex gap-4">
-          <img src="/mario.jpg" alt="Mag. Dr. Mario Schrenk MSc" class="w-20 h-20 rounded-xl object-cover ring-2 ring-phleon-mint" width="80" height="80" loading="lazy">
+          <img src="/pictures/mario.jpg" alt="Mag. Dr. Mario Schrenk MSc" class="w-20 h-20 rounded-xl object-cover ring-2 ring-phleon-mint">
           <div>
             <h3 class="font-semibold">Mag. Dr. Mario Schrenk MSc</h3>
-            <p class="text-sm leading-relaxed">CEO & Regulatory Lead – 15 Jahre MedTech, Qualitäts‑ & Zulassungsexperte.</p>
-            <p class="mt-2 text-sm"><a class="underline hover:text-phleon-fresh" href="https://www.linkedin.com/in/">LinkedIn</a></p>
+            <p class="text-sm">CEO & Regulatory Lead – 15 Jahre MedTech, Qualitäts- & Zulassungsexperte.</p>
           </div>
         </div>
         <div class="p-5 rounded-xl border flex gap-4">
-          <img src="/sandra.jpg" alt="Dipl.-Ing. Dr. Sandra Seichter" class="w-20 h-20 rounded-xl object-cover ring-2 ring-phleon-mint" width="80" height="80" loading="lazy">
+          <img src="/pictures/sandra.jpg" alt="Dipl.-Ing. Dr. Sandra Seichter" class="w-20 h-20 rounded-xl object-cover ring-2 ring-phleon-mint">
           <div>
             <h3 class="font-semibold">Dipl.-Ing. Dr. Sandra Seichter</h3>
-            <p class="text-sm leading-relaxed">CTO & Head of Innovation – Systementwicklung & Innovation, 14 Jahre Erfahrung.</p>
-            <p class="mt-2 text-sm"><a class="underline hover:text-phleon-fresh" href="https://www.linkedin.com/in/">LinkedIn</a></p>
+            <p class="text-sm">CTO & Head of Innovation – Systementwicklung & Innovation, 14 Jahre Erfahrung.</p>
           </div>
         </div>
       </div>
-      <p class="mt-6 text-sm text-slate-700">Gemeinsam bringen wir <strong>25+ Jahre MedTech‑Erfahrung</strong> in Regulierung, Innovation und Klinikpartnerschaften mit.</p>
     </div>
   </section>
 
@@ -185,75 +100,38 @@
   <section id="contact" class="section border-t bg-white">
     <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
       <h2 class="text-2xl md:text-3xl font-semibold">Kontakt / Interesse</h2>
-
-      <div id="thanks" class="hidden mt-4 p-4 rounded-lg border border-phleon-mint bg-phleon-lime text-phleon-primary">
-        Danke für Ihre Nachricht! Wir melden uns zeitnah.
-      </div>
-
       <div class="mt-6 grid md:grid-cols-2 gap-8 items-start">
-        <form id="contactForm" class="p-6 rounded-xl border bg-white space-y-3"
-              action="https://formspree.io/f/mrbazaok" method="POST" novalidate>
-          <input type="text" name="_gotcha" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="Phleon – Interesse / Kontaktanfrage">
-          <label class="block text-sm"><span class="text-slate-900">Name</span>
-            <input class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint" type="text" name="name" required>
+        <form id="contactForm" action="https://formspree.io/f/mrbazaok" method="POST" class="p-6 rounded-xl border bg-white space-y-3">
+          <label class="block text-sm">Name
+            <input class="mt-1 w-full border rounded-lg px-4 py-3" type="text" name="name" required>
           </label>
-          <label class="block text-sm"><span class="text-slate-900">E‑Mail</span>
-            <input class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint" type="email" name="email" required>
+          <label class="block text-sm">E-Mail
+            <input class="mt-1 w-full border rounded-lg px-4 py-3" type="email" name="email" required>
           </label>
-          <label class="block text-sm"><span class="text-slate-900">Nachricht</span>
-            <textarea class="mt-1 w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-phleon-mint" name="message" rows="4" placeholder="Kurze Nachricht (Invest, Partnerschaft, Pilot, …)"></textarea>
+          <label class="block text-sm">Nachricht
+            <textarea class="mt-1 w-full border rounded-lg px-4 py-3" name="message" rows="4"></textarea>
           </label>
           <button class="w-full bg-phleon-primary hover:bg-phleon-fresh text-white rounded-lg px-4 py-3" type="submit">Absenden</button>
-          <p class="text-xs text-slate-600 mt-2">Oder E‑Mail an <a class="underline hover:text-phleon-fresh" href="mailto:mario@phleon.tech?subject=Interesse%20an%20Phleon">mario@phleon.tech</a></p>
         </form>
-
         <div class="p-6 rounded-xl border bg-white">
           <h3 class="text-lg font-semibold">Kurzinfo</h3>
-          <ul class="mt-3 list-disc pl-5 leading-relaxed">
-            <li>Use‑Case: Frühwarnsystem nach OP, Immobilität, Langstrecke</li>
+          <ul class="mt-3 list-disc pl-5">
+            <li>Use-Case: Frühwarnsystem nach OP, Immobilität, Langstrecke</li>
             <li>Technologie: IPG + PPG + Temperatur + Bewegung, erklärbare KI</li>
-            <li>Status: Vorserien‑/Pilotphase; klinische Validierung geplant</li>
+            <li>Status: Vorserien-/Pilotphase; klinische Validierung geplant</li>
           </ul>
-          <img src="/mockup.png" alt="Produkt‑Mockup" class="mt-4 w-full rounded-lg" width="1200" height="800" loading="lazy">
+          <img src="/pictures/mockup_socke.jpg" alt="Socke Mockup" class="mt-4 w-full rounded-lg">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="border-t bg-phleon-light/40">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-700">
-      <p>© <span id="y"></span> Phleon · <a class="underline hover:text-phleon-fresh" href="/impressum.html">Impressum</a> · <a class="underline hover:text-phleon-fresh" href="/datenschutz.html">Datenschutz</a></p>
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm">
+      <p>© <span id="y"></span> Phleon · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Mobile menu
-    (function () {
-      const btn = document.getElementById('menuBtn'), nav = document.getElementById('mobileNav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', () => {
-        const open = nav.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(open));
-        btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-      });
-    })();
-
-    // AJAX Formspree (no redirect)
-    (function () {
-      const form = document.getElementById('contactForm'), thanks = document.getElementById('thanks');
-      if (!form) return;
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (!form.checkValidity()) { form.reportValidity(); return; }
-        const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{Accept:'application/json'} });
-        if (res.ok) { thanks.classList.remove('hidden'); form.reset(); history.replaceState(null,'', '#contact'); }
-        else alert('Senden fehlgeschlagen. Bitte später erneut versuchen oder an mario@phleon.tech schreiben.');
-      });
-    })();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
